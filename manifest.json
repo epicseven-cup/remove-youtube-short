@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "remove-youtube-short",
+  "version": "1.0.0",
+  "description": "Remove youtube short videos",
+  "icons": {},
+   "browser_specific_settings": {
+    "gecko": {
+      "id": "winterstorm.dev@gmail.com",
+      "strict_min_version": "58.0"
+    }
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "content-script.js"
+      ],
+      "matches": [
+        "https://*.youtube.com/*"
+      ]
+    }
+  ]
+}
