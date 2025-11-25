@@ -19,7 +19,7 @@
         "content-script.js"
       ],
       "matches": [
-        "https://*.youtube.com/*"
+        "https://*.youtube.com/**"
       ]
     }
   ]

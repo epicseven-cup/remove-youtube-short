@@ -1,5 +1,6 @@
-function remove_shorts(shorts: NodeListOf<Element>){
+function remove_shorts(){
     console.log("Removing Youtube shorts")
+    const shorts = document.querySelectorAll('[is-shorts=""]') ?? []
     console.log(`Short content found: ${shorts.length}`)
 
     for (const e of shorts) {
@@ -18,8 +19,5 @@ function remove_shorts(shorts: NodeListOf<Element>){
 }
 
 setInterval( ()=> {
-    const shorts = document.querySelectorAll('[is-shorts=""]') ?? []
-    if (shorts.length > 0) {
-        remove_shorts(shorts)
-    }
+    remove_shorts()
 }, 1000)

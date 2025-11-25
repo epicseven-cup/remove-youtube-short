@@ -1,6 +1,7 @@
 // src/content.ts
-function remove_shorts(shorts) {
+function remove_shorts() {
   console.log("Removing Youtube shorts");
+  const shorts = document.querySelectorAll('[is-shorts=""]') ?? [];
   console.log(`Short content found: ${shorts.length}`);
   for (const e of shorts) {
     e.remove();
@@ -14,8 +15,5 @@ function remove_shorts(shorts) {
   }
 }
 setInterval(() => {
-  const shorts = document.querySelectorAll('[is-shorts=""]') ?? [];
-  if (shorts.length > 0) {
-    remove_shorts(shorts);
-  }
+  remove_shorts();
 }, 1e3);
