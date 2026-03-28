@@ -2,6 +2,8 @@
 
 A Firefox extension that hides YouTube Shorts from the UI and redirects any Shorts URLs back to YouTube.
 
+https://addons.mozilla.org/en-US/firefox/addon/remove-youtube-short/
+
 ## What it does
 
 - Hides the Shorts section from the YouTube home feed and sidebar
