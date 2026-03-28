@@ -1,0 +1,19 @@
+a[title="Shorts"] {
+    display: none !important;
+}
+
+ytd-rich-shelf-renderer[is-shorts=""] {
+    display: none !important;
+}
+
+#rich-shelf-header a[href="/playables"] {
+    display: none !important;
+}
+
+ytd-mini-game-card-view-model {
+    display: none !important;
+}
+
+a:is([href^="/shorts/"], [href^="https://www.youtube.com/shorts/"], [href^="https://youtube.com/shorts/"], [href^="https://youtube.com/shorts/"]) {
+  display: none !important;
+}

@@ -1,16 +1,27 @@
-How to build the application:
+# remove-youtube-short
 
+A Firefox extension that hides YouTube Shorts from the UI and redirects any Shorts URLs back to YouTube.
 
-Env:
+## What it does
 
-Install deno:
-https://docs.deno.com/runtime/getting_started/installation/
+- Hides the Shorts section from the YouTube home feed and sidebar
+- Hides Shorts links and thumbnails throughout the site
+- Redirects `youtube.com/shorts/*` URLs away automatically
 
-1. Build the application:
+## Setup
+
+Install Deno: https://docs.deno.com/runtime/getting_started/installation/
+
+## Build
 
 ```bash
-deno run build
+deno task build
 ```
 
+This bundles `src/content.ts` and copies `manifest.json` into `dist/`.
 
-2. Load the extension into firefox using `dist/` file
+## Load in Firefox
+
+1. Go to `about:debugging` in Firefox
+2. Click **This Firefox** > **Load Temporary Add-on**
+3. Select any file inside the `dist/` folder

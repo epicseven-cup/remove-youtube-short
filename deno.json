@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "build": "deno bundle -o dist/content-script.js src/content.ts"
+    "build": "deno bundle -o dist/content-script.js src/content.ts && cp manifest.json dist/manifest.json"
   },
   "imports": {
     "@std/assert": "jsr:@std/assert@1"

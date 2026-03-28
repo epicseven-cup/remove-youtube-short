@@ -1,19 +1,9 @@
 // src/content.ts
-function remove_shorts() {
-  console.log("Removing Youtube shorts");
-  const shorts = document.querySelectorAll('[is-shorts=""]') ?? [];
-  console.log(`Short content found: ${shorts.length}`);
-  for (const e of shorts) {
-    e.remove();
-    console.log("Remove is called");
-  }
-  const short_button = document.querySelector("[title='Shorts']") ?? document.createElement("button");
-  short_button.remove();
-  const short_video = document.getElementsByClassName("short-video-container") ?? [];
-  for (const e of short_video) {
-    e.remove();
-  }
+var return_link = document.referrer === "" ? "https://www.youtube.com/" : document.referrer;
+console.log("hello world");
+var regex = /youtube.com\/shorts/;
+console.log(regex.test(window.location.href));
+console.log(window.location.href);
+if (regex.test(window.location.href)) {
+  window.location.replace(return_link);
 }
-setInterval(() => {
-  remove_shorts();
-}, 1e3);
